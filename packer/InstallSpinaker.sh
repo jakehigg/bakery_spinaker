@@ -69,11 +69,13 @@ for service in front50 fiat clouddriver echo gate igor orca rosco; do
     tee /lib/systemd/system/${service}.service <<EOF >/dev/null
 [Unit]
 Description=${service}
+
 [Service]
 Type=simple
 User=spinnaker
 Group=spinnaker
 ExecStart=/opt/${service}/bin/${service}
+
 [Install]
 WantedBy=multi-user.target
 EOF
