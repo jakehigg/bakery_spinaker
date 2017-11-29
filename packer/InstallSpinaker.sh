@@ -32,6 +32,7 @@ function install_redis () {
 }
 
 apt-get update
+sleep 30
 
 # Python 2 doesn't exist on Ubuntu 16 but is needed by Spinnaker
 
