@@ -45,7 +45,7 @@
             "inline":[
 		"git clone https://github.com/jakehigg/bakery_spinaker.git",
 		"sudo /opt/puppetlabs/bin/puppet apply bakery_spinaker/puppet/site.pp",
-		"sudo sh bakery_spinaker/packer/InstallSpinaker.sh",
+		"sudo bash bakery_spinaker/packer/InstallSpinaker.sh",
 		"rm -rvf bakery_spinaker"
 		]
         }
