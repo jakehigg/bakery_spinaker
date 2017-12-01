@@ -46,7 +46,7 @@
 		"git clone https://github.com/jakehigg/bakery_spinaker.git",
 		"sudo /opt/puppetlabs/bin/puppet apply bakery_spinaker/puppet/site.pp",
 		"curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/stable/InstallHalyard.sh",
-		"sudo bash InstallHalyard.sh"
+		"sudo bash InstallHalyard.sh",
 		"rm -rvf bakery_spinaker"
 		]
         }
