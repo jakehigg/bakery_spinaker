@@ -16,7 +16,7 @@
       "virtualization-type": "hvm",
       "root-device-type": "ebs",
       "tag:OS": "Linux",
-      "tag:Release": "Ubuntu16",
+      "tag:Release": "Ubuntu14",
       "tag:Role": "Base",
       "tag:Profile": "None",
       "tag:Version": "Latest"
@@ -32,7 +32,7 @@
     "ami_name": "Ubuntu Base Spinaker {{timestamp}}",
     "tags": {
         "OS": "Linux",
-        "Release": "Ubuntu16",
+        "Release": "Ubuntu14",
         "Role": "Base",
 		"Profile": "Spinaker",
         "Version": "Latest"
@@ -45,7 +45,8 @@
             "inline":[
 		"git clone https://github.com/jakehigg/bakery_spinaker.git",
 		"sudo /opt/puppetlabs/bin/puppet apply bakery_spinaker/puppet/site.pp",
-		"sudo bash bakery_spinaker/packer/InstallSpinaker.sh",
+		"curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/stable/InstallHalyard.sh",
+		"sudo bash InstallHalyard.sh"
 		"rm -rvf bakery_spinaker"
 		]
         }
